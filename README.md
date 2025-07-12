@@ -27,7 +27,7 @@
 ## 🕹 How to Use
 
 - **Press `F10`** in-game to open the TDRX config menu.
-- Use `W/S` or `↑/↓` to navigate, and `ENTER` to toggle settings.
+- Use `Z/X` to navigate, and `ENTER` to toggle settings.
 - Changes apply instantly — no need to restart.
 - TDRX automatically applies extra boosts if your FPS drops below 30.
 

@@ -1,0 +1,44 @@
+name: "🐞 Bug Report"
+description: Report a bug or unexpected behavior in TDRX
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve TDRX! Please provide as much detail as possible.
+
+  - type: input
+    id: version
+    attributes:
+      label: TDRX Version
+      placeholder: "e.g. v1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What’s the issue?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Describe how to reproduce the issue
+      placeholder: |
+        1. Launch Teardown
+        2. Enable TDRX
+        3. Load 'castle_redux'
+        4. Observe the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: If possible, share relevant console output or images

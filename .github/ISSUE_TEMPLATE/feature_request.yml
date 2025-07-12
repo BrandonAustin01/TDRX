@@ -1,0 +1,35 @@
+name: "💡 Feature Request"
+description: Suggest a new idea or performance enhancement for TDRX
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve TDRX by suggesting new ideas or upgrades.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      placeholder: "Add a preset system, auto-toggle, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Use Case / Why?
+      description: Why would this feature improve TDRX?
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Implementation Suggestion (Optional)
+      description: How do you imagine it working?
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Ideas or Issues
+      description: Any existing discussions or bugs related to this?

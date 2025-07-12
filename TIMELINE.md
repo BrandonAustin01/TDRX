@@ -7,6 +7,7 @@
 ## ✅ v1.0.0 — Core Release
 
 **Released:** 07/11/2025
+
 **Focus:** Foundational performance toggles, auto-boost, and clean UX
 
 * 🚀 FPS Boost Toggles:
@@ -33,6 +34,7 @@
 ## 🔜 v1.1.0 — UX & Config Upgrade
 
 **ETA:** 1–2 weeks post-launch
+
 **Focus:** Interactivity, fine control, and polish
 
 * 🎛️ Slider controls (e.g., debris count, physics rate)
@@ -65,6 +67,7 @@
 ## 🌍 v1.3.0 — Mod Compatibility & Modder Tools
 
 **ETA:** Based on demand or bug reports
+
 **Focus:** Support for popular mods and advanced control
 
 * 🤝 Compatibility logic for known mods (e.g., Realistic Fire, graphics overhauls)

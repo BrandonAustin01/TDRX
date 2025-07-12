@@ -6,7 +6,7 @@
 
 ## ✅ v1.0.0 — Core Release
 
-**Released:** Today
+**Released:** 07/11/2025
 **Focus:** Foundational performance toggles, auto-boost, and clean UX
 
 * 🚀 FPS Boost Toggles:

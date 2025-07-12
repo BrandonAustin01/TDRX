@@ -1,0 +1,10 @@
+{
+  "name": "TDRX",
+  "version": "1.0.1",
+  "title": "TDRX - Teardown Runtime eXtension",
+  "description": "TDRX is an advanced performance booster for Teardown. It dynamically improves framerate with visual, physics, and script optimizations, includes a toggleable UI, and activates auto-boost when lag is detected.",
+  "author": "BrandonAustin01",
+  "tags": ["optimization", "performance", "utility"],
+  "script": "main.lua",
+  "image": "preview.png"
+}

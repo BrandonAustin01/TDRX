@@ -1,0 +1,6 @@
+name = TDRX - Teardown Runtime eXtension
+description = Boost your FPS in any map with real-time optimization! Press F10 in-game to open the TDRX menu, then use Z/X to navigate and Enter to toggle features like debris removal, lighting reduction, and post-processing. Includes auto-boost when FPS drops and a reset button to restore defaults.
+type = script
+author = BrandonAustin01
+tags = performance, optimization, utility, fps
+preview_image = preview.png

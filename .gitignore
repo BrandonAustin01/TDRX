@@ -1,42 +1,52 @@
-# --- Teardown Mod Dev ---
+# --- Teardown Mod Development ---
 *.bak
 *.tmp
 *.log
-*.DS_Store
-Thumbs.db
-
-# Ignore Teardown-specific state (if running from dev)
-savegame.*
-game.*
-temp/
-
-# --- Lua / Mod-related ---
-*.luac             
-*.swp            
-*.sublime-workspace
-*.sublime-project
-*.vscode/
-*.idea/
-
-# --- System-specific ---
-.DS_Store
-ehthumbs.db
-desktop.ini
-
-# --- Misc ---
 *.old
 *.orig
 *.rej
 
-# --- Build outputs (if added later) ---
-/dist/
-/build/
-/output/
-
-# --- Mod config backups (if any) ---
+# Teardown mod state & savegame persistence
+savegame.*
+game.*
+temp/
 backup/
 *.backup.json
 
-# --- Optional: ignore version file if fetched from web ---
+# Mod config artifacts (if saved)
+*.config.json
+config/local/
+
+# --- Lua ---
+*.luac                # Compiled Lua bytecode
+*.swp                 # Vim swap files
+
+# --- Editor/IDE ---
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --- Build or Dist Output (future-proof) ---
+/build/
+/dist/
+/output/
+
+# --- GitHub Templates (optional to ignore) ---
+.github/
+
+# --- Version Files (optional if fetched remotely) ---
 version.json
+
+# --- Logs (optional if dynamic) ---
+*.log
+logs/
+activity.log
+
 /Releases

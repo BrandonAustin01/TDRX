@@ -1,5 +1,9 @@
 # TDRX - Teardown Runtime eXtension
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cf21cda0-f858-4075-9d2d-00b42339614e" alt="TDRX Logo" width="300"/>
+</p>
+
 **TDRX** is a dynamic performance optimization mod for [Teardown](https://teardowngame.com/) that intelligently improves framerate by disabling expensive visual effects, removing unnecessary entities, and applying runtime boosts when low FPS is detected.
 
 ---

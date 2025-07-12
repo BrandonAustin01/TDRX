@@ -1,7 +1,3 @@
-Here’s your **final v1.0.0 changelog** for **TDRX (Teardown Runtime eXtension)** — polished and formatted for use in your Workshop post, GitHub, or internal docs:
-
----
-
 # 📝 Changelog: TDRX v1.0.0 — Initial Release
 
 **Release Date:** 07/11/2025
@@ -68,9 +64,3 @@ TDRX is designed to be:
 * Toggleable 🔘
 * Non-invasive 🔒
 * Community-ready 🌍
-
-This version sets the foundation for upcoming features in **v1.1.0+**, including presets, sliders, benchmarks, and compatibility modules.
-
----
-
-Let me know if you'd like a `CHANGELOG.md` file output, or if you're ready to tag this build for release and move on to v1.1.0 planning.

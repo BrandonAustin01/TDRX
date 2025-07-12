@@ -39,3 +39,4 @@ backup/
 
 # --- Optional: ignore version file if fetched from web ---
 version.json
+/Releases

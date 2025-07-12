@@ -1,7 +1,3 @@
-Here is your **updated timeline** rebranded for **TDRX (Teardown Runtime eXtension)** with all completed work and planned upgrades fully integrated:
-
----
-
 # 📅 TDRX Development Roadmap
 
 *A structured release timeline for the TDRX (Teardown Runtime eXtension) mod.*

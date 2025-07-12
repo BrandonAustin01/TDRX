@@ -21,7 +21,7 @@
 * 🧠 Automatic FPS detection and failsafe auto-boost below 30 FPS
 * 🖥️ Config UI (toggleable with `F10`)
 * 💾 Settings saved between sessions
-* 🔧 Keyboard navigation (W/S + Enter)
+* 🔧 Keyboard navigation (Z/X + Enter)
 * 🖼️ Polished UI layout and interaction
 * 🗂️ Fully Workshop-ready
 

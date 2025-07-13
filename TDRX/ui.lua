@@ -1,4 +1,3 @@
--- ui.lua (patched with keyboard navigation + reset button)
 local options = {
     { key = "removeDebris", label = "Remove Debris", hint = "Disables clutter and debris" },
     { key = "reduceLights", label = "Reduce Lights", hint = "Lowers dynamic light count" },
@@ -11,8 +10,7 @@ local options = {
 }
 
 local selectedIndex = 1
-
-TDRX_VERSION = "1.0.0" -- change this as needed
+TDRX_VERSION = "1.0.1"
 
 function DrawUI()
     UiPush()
@@ -21,6 +19,7 @@ function DrawUI()
     UiText("TDRX (v" .. TDRX_VERSION .. ")")
     UiTranslate(0, 30)
 
+    -- Options list
     for i, opt in ipairs(options) do
         if i == selectedIndex then
             UiColor(1, 1, 0.4)
@@ -32,7 +31,7 @@ function DrawUI()
         UiTranslate(0, 30)
     end
 
-    -- Reset button
+    -- Reset to Defaults
     UiColor(1, 0.6, 0.6)
     UiFont("bold.ttf", 20)
     if selectedIndex == #options + 1 then
@@ -40,23 +39,32 @@ function DrawUI()
     else
         UiText("   Reset to Defaults")
     end
+
+    UiTranslate(0, 30)
+
+    -- Clean Up Debris
+    UiColor(0.6, 1.0, 0.6)
+    if selectedIndex == #options + 2 then
+        UiText("▶ Clean Up Debris")
+    else
+        UiText("   Clean Up Debris")
+    end
     UiColor(1, 1, 1)
 
-    UiTranslate(0, 20)
+    UiTranslate(0, 30)
     UiColor(0.7, 0.7, 1)
     UiText("Press ENTER to toggle | Z/X to navigate")
-    
     UiPop()
 end
 
 function HandleUiInput()
     if InputPressed("z") then
         selectedIndex = selectedIndex - 1
-        if selectedIndex < 1 then selectedIndex = #options + 1 end
+        if selectedIndex < 1 then selectedIndex = #options + 2 end
 
     elseif InputPressed("x") then
         selectedIndex = selectedIndex + 1
-        if selectedIndex > #options + 1 then selectedIndex = 1 end
+        if selectedIndex > #options + 2 then selectedIndex = 1 end
 
     elseif InputPressed("return") then
         if selectedIndex <= #options then
@@ -65,6 +73,8 @@ function HandleUiInput()
             SaveConfig()
         elseif selectedIndex == #options + 1 then
             ResetToDefaults()
+        elseif selectedIndex == #options + 2 then
+            ManualCleanUpDebris()
         end
     end
 end

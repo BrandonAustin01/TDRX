@@ -1,4 +1,46 @@
-# 📝 Changelog: TDRX v1.0.0 — Initial Release
+# 🛠️ Patch: TDRX v1.0.1 — "Polish & Precision"
+
+**Release Date:** 07/12/2025
+**Version:** `v1.0.1`
+**Codename:** *Polish & Precision*
+
+---
+
+### 🔧 Bug Fixes
+
+* 🛑 **Boost Alert Toggle Now Respected**
+  The `"Show Boost Alerts"` option now correctly suppresses onscreen popups and debug logs when disabled.
+
+---
+
+### ✨ New Features
+
+* 🧹 **Manual Debris Cleanup Button**
+  Added a new UI option: `"Clean Up Debris"`
+
+  * Immediately removes all non-essential debris tagged as `debris`
+  * Useful after major destruction events to regain performance
+  * Confirmation popup appears after cleanup
+
+---
+
+### 🧩 UI & UX Enhancements
+
+* 🎯 UI navigation extended to include **manual cleanup**
+* 🔁 Internal cleanup of boost alert logic for better toggle safety
+* 🆔 Version number updated to `v1.0.1` in the config UI
+
+---
+
+### 🔒 Compatibility
+
+* ✅ Fully backward-compatible with v1.0.0 configs
+* ✅ No structural changes to config format
+* ✅ Only touches `main.lua` and `ui.lua`
+
+---
+
+## 📝 Changelog: TDRX v1.0.0 — Initial Release
 
 **Release Date:** 07/11/2025
 **Version:** `v1.0.0`

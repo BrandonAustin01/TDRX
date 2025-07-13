@@ -10,6 +10,8 @@ configOpen = false
 lowFpsTimer = 0
 fpsRecoveryTimer = 0
 lastBoostAlertTime = -10
+popupMessage = nil
+popupTime = 0
 
 function init()
     InitConfig()
@@ -36,7 +38,7 @@ function init()
     end
 
     OptimizeVisuals()
-    OptimizeEntities()
+    -- OptimizeEntities() now runs only when triggered manually
     OptimizeScripts()
     OptimizePhysics()
 end
@@ -66,12 +68,14 @@ function tick()
         DebugPrint("[TDRX] Low FPS detected! Activating failsafe performance mode.")
         AutoBoostPerformance()
 
-        -- Throttled alert popup
+        -- Show popup only if enabled
         local now = GetTime()
-        if performanceConfig.showBoostAlerts and (now - lastBoostAlertTime) > 10 then
-            DebugPrint("[TDRX] Boost popup triggered.")
-            DisplayPopup("⚠️ Low FPS detected\nPerformance boost applied.")
-            lastBoostAlertTime = now
+        if performanceConfig.showBoostAlerts then
+            if (now - lastBoostAlertTime) > 10 then
+                DebugPrint("[TDRX] Boost popup triggered.")
+                DisplayPopup("⚠️ Low FPS detected\nPerformance boost applied.")
+                lastBoostAlertTime = now
+            end
         end
 
         lowFpsTimer = -9999
@@ -92,6 +96,16 @@ function draw()
 
     if performanceConfig.showFpsCounter then
         ShowFpsCounter()
+    end
+
+    if popupMessage and (GetTime() - popupTime) < 3 then
+        UiPush()
+            UiFont("regular.ttf", 20)
+            UiAlign("left bottom")
+            UiTranslate(30, UiHeight() - 40)
+            UiColor(1, 1, 1, 0.9)
+            UiText(popupMessage)
+        UiPop()
     end
 end
 
@@ -121,12 +135,16 @@ function ShowFpsCounter()
 end
 
 function DisplayPopup(message)
-    UiPush()
-    UiFont("bold.ttf", 24)
-    UiAlign("center middle")
-    UiTranslate(UiCenter(), UiMiddle() - 200)
-    UiColor(1, 0.9, 0.3)
-    UiText(message)
-    UiColor(1, 1, 1)
-    UiPop()
+    popupMessage = message
+    popupTime = GetTime()
+end
+
+function ManualCleanUpDebris()
+    local count = OptimizeEntities()
+
+    if count and count > 0 then
+        DisplayPopup("🧹 Cleaned up " .. count .. " debris objects.")
+    else
+        DisplayPopup("✅ No debris found to clean.")
+    end
 end

@@ -42,10 +42,16 @@
 * 🧠 Hover tooltips and smarter help text
 * 🎨 UI section headers and spacing polish
 * 💾 Config Presets:
-
   * “Safe”
   * “Balanced”
   * “Max Boost”
+* 🎯 Smart auto-boost logic:
+  * Triggered by entity count, fire volume, and object velocity
+* 🔔 Toggleable alert beep when boost triggers
+* 🧹 Manual “Clean Up Debris” button in UI
+* 📊 Performance HUD:
+  * Example: `Boost: ON | FPS: 34 | Debris: 102 | Lights: 7`
+* 💡 Reactive UI color highlights based on FPS state
 * 🔧 Optional keybind remapping for opening the menu
 * 💡 UI responsiveness and animation improvements
 
@@ -53,7 +59,7 @@
 
 ## 🧪 v1.2.0 — Benchmark & Analytics Mode
 
-**ETA:** After slider system is stable
+**ETA:** After slider + preset system is stable
 **Focus:** Performance transparency and bragging rights
 
 * 📈 On-screen FPS history graph
